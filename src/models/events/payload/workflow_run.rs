@@ -23,6 +23,7 @@ pub struct WorkflowRunEventPayload {
 #[non_exhaustive]
 pub enum WorkflowRunEventAction {
     Requested,
+    InProgress,
     Completed,
 }
 
