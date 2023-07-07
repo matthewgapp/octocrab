@@ -63,7 +63,7 @@ mod tests {
         let comparison = handler.compare("base", "head");
 
         assert_eq!(
-            serde_json::to_value(comparison).unwrap(),
+            serde_json::to_value(&comparison).unwrap(),
             serde_json::json!({
                 "base": "base",
                 "head": "head",
