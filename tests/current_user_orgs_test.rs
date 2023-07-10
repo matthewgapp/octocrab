@@ -18,21 +18,13 @@ async fn setup_api(template: ResponseTemplate) -> MockServer {
     let mock_server = MockServer::start().await;
 
     Mock::given(method("GET"))
-<<<<<<< HEAD
         .and(path("/user/memberships/orgs"))
-=======
-        .and(path("/user/memberships/orgs".to_string()))
->>>>>>> 11200c2 (clippy)
         .respond_with(template)
         .mount(&mock_server)
         .await;
     setup_error_handler(
         &mock_server,
-<<<<<<< HEAD
         "GET on /user/membership/orgs was not received",
-=======
-        &"GET on /user/membership/orgs was not received".to_string(),
->>>>>>> 11200c2 (clippy)
     )
     .await;
     mock_server
