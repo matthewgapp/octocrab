@@ -1380,6 +1380,7 @@ impl Octocrab {
                 let token = if let Some(token) = token.get() {
                     token
                 } else {
+                    println!("requesting access token for installation");
                     self.request_installation_auth_token().await?
                 };
 
