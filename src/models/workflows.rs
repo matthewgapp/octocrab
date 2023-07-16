@@ -102,12 +102,20 @@ pub struct Job {
 #[serde(rename_all = "snake_case")]
 #[non_exhaustive]
 pub enum Conclusion {
+<<<<<<< HEAD
+=======
+    #[serde(rename = "action_required")]
+>>>>>>> 69d5369 (bring conclusion in line with json schema)
     ActionRequired,
     Cancelled,
     Failure,
     Neutral,
     Skipped,
     Success,
+<<<<<<< HEAD
+=======
+    #[serde(rename = "timed_out")]
+>>>>>>> 69d5369 (bring conclusion in line with json schema)
     TimedOut,
 }
 
